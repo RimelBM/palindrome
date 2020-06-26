@@ -1,0 +1,45 @@
+FUNCTION Palindrone (ch:STRING) : BOOLEAN
+
+BEGIN
+
+
+    IF (ch.length=1 OR ch.length=0) THEN
+
+        RETURN TRUE ;
+
+    ELSE_IF (ch[0] = ch[ch.length-1]) THEN
+        
+        // j'ai utilisé substr du javascript ,pour retourner la chaine 'ch' sans le premier et le dernier charactere
+        Palindrone(ch.substr( 1 , ch.length-2 ))
+    ELSE
+        RETURN FALSE ;
+    
+    END_IF
+END
+
+
+ALGORITHM recursive_problem
+VAR
+    ch : STRING ;
+    val : BOOLEAN ;
+
+BEGIN
+
+    Write("ecrivez votre mot : ")
+    Read(ch) ;
+
+    val : Palindrone(ch) ;
+
+
+    IF val = TRUE) THEN
+
+        Write("A word is a palindrome") ;
+    
+    ELSE
+    
+        Write("A word is not a palindrone") ;
+    
+    END_IF
+
+    
+END
