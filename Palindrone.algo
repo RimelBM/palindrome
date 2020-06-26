@@ -1,3 +1,4 @@
+
 FUNCTION Palindrone (ch:STRING) : BOOLEAN
 
 BEGIN
@@ -10,7 +11,7 @@ BEGIN
     ELSE_IF (ch[0] = ch[ch.length-1]) THEN
         
         // j'ai utilisé substr du javascript ,pour retourner la chaine 'ch' sans le premier et le dernier charactere
-        Palindrone(ch.substr( 1 , ch.length-2 ))
+        Palindrone(ch.substr( 1 , ch.length-2 )) ;
     ELSE
         RETURN FALSE ;
     
@@ -25,13 +26,13 @@ VAR
 
 BEGIN
 
-    Write("ecrivez votre mot : ")
+    Write("ecrivez votre mot : ") ; 
     Read(ch) ;
 
     val : Palindrone(ch) ;
 
 
-    IF val = TRUE) THEN
+    IF (val = TRUE) THEN
 
         Write("A word is a palindrome") ;
     
